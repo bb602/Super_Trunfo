@@ -2,19 +2,19 @@
 #include <iostream>
 #include <string>
 
-float  Dinossauro::get_altura(){
+std::string Dinossauro::get_altura(){
 	return altura;
 }
 
-float Dinossauro::get_peso(){
+std::string Dinossauro::get_peso(){
 	return peso;
 }
 
-float Dinossauro::get_comprimento(){
+std::string Dinossauro::get_comprimento(){
 	return comprimento;
 }
 
-int Dinossauro::get_viveu_ha(){
+std::string Dinossauro::get_viveu_ha(){
 	return viveu_ha;
 }
 

@@ -1,8 +1,8 @@
 #include <Menu.h>
 #include <iostream>
 
+
 void Menu(int x){
-	// O método "Menu" tem por objetivo mostrar na tela as modalidades do jogo bem como suas regras.
 	switch(x){
 	case 1:
 		std::cout << "Super Trunfo Aviao!" << std::endl;

@@ -6,16 +6,16 @@
 
 class Dinossauro: public Cartas {
 private:
-	float altura;
-	float peso;
-	float comprimento;
-	int viveu_ha;
+	std::string altura;
+	std::string peso;
+	std::string comprimento;
+	std::string viveu_ha;
 public:
 	//GETS
-	float get_altura();
-	float get_peso();
-	float get_comprimento();
-	int get_viveu_ha();
+	std::string get_altura();
+	std::string get_peso();
+	std::string get_comprimento();
+	std::string get_viveu_ha();
 
 	void imprime_carta() override;
 
