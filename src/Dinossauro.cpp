@@ -25,7 +25,7 @@ void Dinossauro::imprime_carta(){
 	std::cout << "# 1 Altura: " << get_altura() << std::endl;
 	std::cout << "# 2 Peso: " << get_peso() << std::endl;
 	std::cout << "# 3 Comprimento: " << get_comprimento() << std::endl;
-	std::cout << "# 4 Viveu há: " << get_viveu_ha() << std::endl;
+	std::cout << "# 4 Viveu ha: " << get_viveu_ha() << std::endl;
 	std::cout << "#########################" << std::endl << std::endl;
 }
 
