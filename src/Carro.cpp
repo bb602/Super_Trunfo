@@ -27,7 +27,7 @@ void Carro::imprime_carta(){
 	std::cout << "Nome: " << get_nome() << std::endl;
 	std::cout << "Tipo: " << get_tipo() << std::endl << std::endl;
 	std::cout << "1 Cilindradas: " << get_cilindradas() << " ccm" << std::endl;
-	std::cout << "2 Potência: " << get_potencia() << " cv" << std::endl;
+	std::cout << "2 Potencia: " << get_potencia() << " cv" << std::endl;
 	std::cout << "3 Velocidade: " << get_velocidade() << " km/h" << std::endl;
 	std::cout << "4 Peso: " << get_peso() << " kg" << std::endl;
 	std::cout << "5 Comprimento: " << get_comprimento() << " m" << std::endl;
