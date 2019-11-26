@@ -109,7 +109,7 @@ void jogada_player(std::stack<Aviao> *pilha_jogador, std::stack<Aviao> *pilha_ad
 
         std::string atributo;
 
-        std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 ]: ";
+        std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 | 5 ]: ";
         std::cin >> atributo;
 
         while(!valida_atributo(atributo)) {
@@ -117,7 +117,7 @@ void jogada_player(std::stack<Aviao> *pilha_jogador, std::stack<Aviao> *pilha_ad
             std::cin.ignore();
 
             std::cout << "ATRIBUTO INVALIDO!" << std::endl;
-            std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 ]: ";
+            std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 | 5 ]: ";
             std::cin >> atributo;
         }
 

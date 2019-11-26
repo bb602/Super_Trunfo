@@ -104,7 +104,7 @@ void jogada_playerD(std::stack<Dinossauro> *pilha_jogador, std::stack<Dinossauro
 
         std::string atributo;
 
-        std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 | 5]: ";
+        std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 ]: ";
         std::cin >> atributo;
 
         while(!valida_atributoD(atributo)) {
@@ -112,7 +112,7 @@ void jogada_playerD(std::stack<Dinossauro> *pilha_jogador, std::stack<Dinossauro
             std::cin.ignore();
 
             std::cout << "ATRIBUTO INVALIDO!" << std::endl;
-            std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 | 5]: ";
+            std::cout << "Selecione um Atributo [1 | 2 | 3 | 4 ]: ";
             std::cin >> atributo;
         }
 
