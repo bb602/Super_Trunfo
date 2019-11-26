@@ -1,49 +1,27 @@
-#ifndef CartasAviao_h
-#define CartasAviao_h
+#ifndef CartasAviao_H
+#define CartasAviao_H
+
 #include <iostream>
 #include <string>
+#include <stack>
+#include <ctime>
+#include <algorithm>
+#include <chrono>
+#include <thread>
 
 #include "Cartas.h"
 #include "Aviao.h"
 
-Aviao carta[4];
+//Alteração na pilha do baralho
+void inverte_pilha(std::stack<Aviao> *pilha);
 
-void cartas_aviao() {
-	carta[0].set_nome("Cessna Citation X");
-    carta[0].set_tipo("A1");
-    carta[0].set_peso(16193);
-    carta[0].set_velocidade(945);
-    carta[0].set_altitude_voo(13636);
-    carta[0].set_comprimento(22.01);
-    carta[0].set_altura(5.76);
-    carta[0].set_super_trunfo(false);
+//Compara cartas
+int compara_cartas(Aviao carta1, Aviao carta2, std::string atributo);
 
-    carta[1].set_nome("Canadair Global Express");
-    carta[1].set_tipo("A2");
-    carta[1].set_peso(41275);
-    carta[1].set_velocidade(880);
-    carta[1].set_altitude_voo(15500);
-    carta[1].set_comprimento(30.20);
-    carta[1].set_altura(7.50);
-    carta[1].set_super_trunfo(false);
+//Possibilita a jogada do player
+void jogada_player(std::stack<Aviao> *pilha_jogador, std::stack<Aviao> *pilha_adversario);
 
-    carta[2].set_nome("Bombardier CRJ 700");
-    carta[2].set_tipo("A3");
-    carta[2].set_peso(32885);
-    carta[2].set_velocidade(785);
-    carta[2].set_altitude_voo(10600);
-    carta[2].set_comprimento(32.41);
-    carta[2].set_altura(7.32);
-    carta[2].set_super_trunfo(false);
-
-    carta[3].set_nome("Boeing 757-300");
-    carta[3].set_tipo("A4");
-    carta[3].set_peso(122472);
-    carta[3].set_velocidade(800);
-    carta[3].set_altitude_voo(11200);
-    carta[3].set_comprimento(54.50);
-    carta[3].set_altura(13.60);
-    carta[3].set_super_trunfo(false);
-}
+//
+bool valida_atributo(std::string atributo);
 
 #endif

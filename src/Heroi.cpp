@@ -22,10 +22,6 @@ int Heroi::get_habilidade(){
 	return habilidade;
 }
 
-bool Heroi::get_super_trunfo(){
-	return super_trunfo;
-}
-
 void Heroi::imprime_carta(){
 	std::cout << "##########CARTA##########" << std::endl;
 	std::cout << "Nome: " << get_nome() << std::endl;
@@ -56,8 +52,4 @@ void Heroi::set_forca(int forca){
 
 void Heroi::set_habilidade(int habilidade){
 	this-> habilidade = habilidade;
-}
-
-void Heroi::set_super_trunfo(bool super_trunfo){
-	this-> super_trunfo = super_trunfo;
 }

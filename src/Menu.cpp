@@ -1,5 +1,6 @@
-#include "Menu.h"
+#include <Menu.h>
 #include <iostream>
+
 
 void Menu(int x){
 	switch(x){

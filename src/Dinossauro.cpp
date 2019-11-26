@@ -18,10 +18,6 @@ int Dinossauro::get_viveu_ha(){
 	return viveu_ha;
 }
 
-bool Dinossauro::get_super_trunfo(){
-	return super_trunfo;
-}
-
 void Dinossauro::imprime_carta(){
 	std::cout << "##########CARTA##########" << std::endl;
 	std::cout << "# Nome: " << get_nome() << std::endl;
@@ -47,8 +43,4 @@ void Dinossauro::set_comprimento(float comprimento){
 
 void Dinossauro::set_viveu_ha(int viveu_ha){
 	this-> viveu_ha = viveu_ha;
-}
-
-void Dinossauro::set_super_trunfo(bool super_trunfo){
-	this-> super_trunfo = super_trunfo;
 }

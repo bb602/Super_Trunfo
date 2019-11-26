@@ -22,10 +22,6 @@ float Carro::get_comprimento(){
 	return comprimento;
 }
 
-bool Carro::get_super_trunfo(){
-	return super_trunfo;
-}
-
 void Carro::imprime_carta(){
 	std::cout << "##########CARTA##########" << std::endl;
 	std::cout << "Nome: " << get_nome() << std::endl;
@@ -56,8 +52,4 @@ void Carro::set_peso(int peso){
 
 void Carro::set_comprimento(float comprimento){
 	this-> comprimento = comprimento;
-}
-
-void Carro::set_super_trunfo(bool super_trunfo){
-	this-> super_trunfo = super_trunfo;
 }
