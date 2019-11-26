@@ -29,7 +29,7 @@ public:
 	void set_potencia(int potencia);
 	void set_velocidade(int velocidade);
 	void set_peso(int peso);
-	void set_comprimento(int comprimento);
+	void set_comprimento(float comprimento);
 	void set_super_trunfo(bool super_trunfo);
 
 };
