@@ -54,17 +54,17 @@ void cartas_aviao() {
     carta[3].set_altura(13.60);
     carta[3].set_super_trunfo(false);
 
-    carta[4].set_nome("Boeing 757-300");
-    carta[4].set_tipo("A4");
-    carta[4].set_peso(122472);
-    carta[4].set_velocidade(800);
-    carta[4].set_altitude_voo(11200);
-    carta[4].set_comprimento(54.50);
+    carta[4].set_nome("Airbus");
+    carta[4].set_tipo("A5");
+    carta[4].set_peso(333472);
+    carta[4].set_velocidade(700);
+    carta[4].set_altitude_voo(11900);
+    carta[4].set_comprimento(60.50);
     carta[4].set_altura(13.60);
     carta[4].set_super_trunfo(false);
 
     carta[5].set_nome("Boeing 757-300");
-    carta[5].set_tipo("A4");
+    carta[5].set_tipo("A6");
     carta[5].set_peso(122472);
     carta[5].set_velocidade(800);
     carta[5].set_altitude_voo(11200);
@@ -73,7 +73,7 @@ void cartas_aviao() {
     carta[5].set_super_trunfo(false);
 
     carta[6].set_nome("Boeing 757-300");
-    carta[6].set_tipo("A4");
+    carta[6].set_tipo("A7");
     carta[6].set_peso(122472);
     carta[6].set_velocidade(800);
     carta[6].set_altitude_voo(11200);
@@ -82,7 +82,7 @@ void cartas_aviao() {
     carta[6].set_super_trunfo(false);
 
     carta[7].set_nome("Boeing 757-300");
-    carta[7].set_tipo("A4");
+    carta[7].set_tipo("A8");
     carta[7].set_peso(122472);
     carta[7].set_velocidade(800);
     carta[7].set_altitude_voo(11200);
@@ -90,8 +90,8 @@ void cartas_aviao() {
     carta[7].set_altura(13.60);
     carta[7].set_super_trunfo(false);
 
-        carta[0].set_nome("Cessna Citation X");
-    carta[8].set_tipo("A1");
+    carta[8].set_nome("Cessna Citation X");
+    carta[8].set_tipo("B1");
     carta[8].set_peso(16193);
     carta[8].set_velocidade(945);
     carta[8].set_altitude_voo(13636);
@@ -100,7 +100,7 @@ void cartas_aviao() {
     carta[8].set_super_trunfo(false);
 
     carta[9].set_nome("Canadair Global Express");
-    carta[9].set_tipo("A2");
+    carta[9].set_tipo("B2");
     carta[9].set_peso(41275);
     carta[9].set_velocidade(880);
     carta[9].set_altitude_voo(15500);
@@ -109,7 +109,7 @@ void cartas_aviao() {
     carta[9].set_super_trunfo(false);
 
     carta[10].set_nome("Bombardier CRJ 700");
-    carta[10].set_tipo("A3");
+    carta[10].set_tipo("B3");
     carta[10].set_peso(32885);
     carta[10].set_velocidade(785);
     carta[10].set_altitude_voo(10600);
@@ -118,7 +118,7 @@ void cartas_aviao() {
     carta[10].set_super_trunfo(false);
 
     carta[11].set_nome("Boeing 757-300");
-    carta[11].set_tipo("A4");
+    carta[11].set_tipo("B4");
     carta[11].set_peso(122472);
     carta[11].set_velocidade(800);
     carta[11].set_altitude_voo(11200);
@@ -127,7 +127,7 @@ void cartas_aviao() {
     carta[11].set_super_trunfo(false);
 
     carta[12].set_nome("Boeing 757-300");
-    carta[12].set_tipo("A4");
+    carta[12].set_tipo("B5");
     carta[12].set_peso(122472);
     carta[12].set_velocidade(800);
     carta[12].set_altitude_voo(11200);
@@ -136,7 +136,7 @@ void cartas_aviao() {
     carta[12].set_super_trunfo(false);
 
     carta[13].set_nome("Boeing 757-300");
-    carta[13].set_tipo("A4");
+    carta[13].set_tipo("B6");
     carta[13].set_peso(122472);
     carta[13].set_velocidade(800);
     carta[13].set_altitude_voo(11200);
@@ -145,7 +145,7 @@ void cartas_aviao() {
     carta[13].set_super_trunfo(false);
 
     carta[14].set_nome("Boeing 757-300");
-    carta[14].set_tipo("A4");
+    carta[14].set_tipo("B7");
     carta[14].set_peso(122472);
     carta[14].set_velocidade(800);
     carta[14].set_altitude_voo(11200);
@@ -154,7 +154,7 @@ void cartas_aviao() {
     carta[14].set_super_trunfo(false);
 
     carta[15].set_nome("Boeing 757-300");
-    carta[15].set_tipo("A4");
+    carta[15].set_tipo("B8");
     carta[15].set_peso(122472);
     carta[15].set_velocidade(800);
     carta[15].set_altitude_voo(11200);
@@ -163,7 +163,7 @@ void cartas_aviao() {
     carta[15].set_super_trunfo(false);
 
     carta[16].set_nome("Cessna Citation X");
-    carta[16].set_tipo("A1");
+    carta[16].set_tipo("D7");
     carta[16].set_peso(16193);
     carta[16].set_velocidade(945);
     carta[16].set_altitude_voo(13636);
@@ -172,7 +172,7 @@ void cartas_aviao() {
     carta[16].set_super_trunfo(false);
 
     carta[17].set_nome("Canadair Global Express");
-    carta[17].set_tipo("A2");
+    carta[17].set_tipo("C1");
     carta[17].set_peso(41275);
     carta[17].set_velocidade(880);
     carta[17].set_altitude_voo(15500);
@@ -181,7 +181,7 @@ void cartas_aviao() {
     carta[17].set_super_trunfo(false);
 
     carta[18].set_nome("Bombardier CRJ 700");
-    carta[18].set_tipo("A3");
+    carta[18].set_tipo("C2");
     carta[18].set_peso(32885);
     carta[18].set_velocidade(785);
     carta[18].set_altitude_voo(10600);
@@ -190,7 +190,7 @@ void cartas_aviao() {
     carta[18].set_super_trunfo(false);
 
     carta[19].set_nome("Boeing 757-300");
-    carta[19].set_tipo("A4");
+    carta[19].set_tipo("C3");
     carta[19].set_peso(122472);
     carta[19].set_velocidade(800);
     carta[19].set_altitude_voo(11200);
@@ -199,7 +199,7 @@ void cartas_aviao() {
     carta[19].set_super_trunfo(false);
 
     carta[20].set_nome("Boeing 757-300");
-    carta[20].set_tipo("A4");
+    carta[20].set_tipo("C4");
     carta[20].set_peso(122472);
     carta[20].set_velocidade(800);
     carta[20].set_altitude_voo(11200);
@@ -208,7 +208,7 @@ void cartas_aviao() {
     carta[20].set_super_trunfo(false);
 
     carta[21].set_nome("Boeing 757-300");
-    carta[21].set_tipo("A4");
+    carta[21].set_tipo("C5");
     carta[21].set_peso(122472);
     carta[21].set_velocidade(800);
     carta[21].set_altitude_voo(11200);
@@ -217,7 +217,7 @@ void cartas_aviao() {
     carta[21].set_super_trunfo(false);
 
     carta[22].set_nome("Boeing 757-300");
-    carta[22].set_tipo("A4");
+    carta[22].set_tipo("C6");
     carta[22].set_peso(122472);
     carta[22].set_velocidade(800);
     carta[22].set_altitude_voo(11200);
@@ -225,17 +225,17 @@ void cartas_aviao() {
     carta[22].set_altura(13.60);
     carta[22].set_super_trunfo(false);
 
-    carta[23].set_nome("Boeing 757-300");
-    carta[23].set_tipo("A4");
+    carta[23].set_nome("Longa distancia");
+    carta[23].set_tipo("ST");
     carta[23].set_peso(122472);
     carta[23].set_velocidade(800);
     carta[23].set_altitude_voo(11200);
     carta[23].set_comprimento(54.50);
     carta[23].set_altura(13.60);
-    carta[23].set_super_trunfo(false);
+    carta[23].set_super_trunfo(true);
 
     carta[24].set_nome("Cessna Citation X");
-    carta[24].set_tipo("A1");
+    carta[24].set_tipo("C8");
     carta[24].set_peso(16193);
     carta[24].set_velocidade(945);
     carta[24].set_altitude_voo(13636);
@@ -244,7 +244,7 @@ void cartas_aviao() {
     carta[24].set_super_trunfo(false);
 
     carta[25].set_nome("Canadair Global Express");
-    carta[25].set_tipo("A2");
+    carta[25].set_tipo("D1");
     carta[25].set_peso(41275);
     carta[25].set_velocidade(880);
     carta[25].set_altitude_voo(15500);
@@ -253,7 +253,7 @@ void cartas_aviao() {
     carta[25].set_super_trunfo(false);
 
     carta[26].set_nome("Bombardier CRJ 700");
-    carta[26].set_tipo("A3");
+    carta[26].set_tipo("D2");
     carta[26].set_peso(32885);
     carta[26].set_velocidade(785);
     carta[26].set_altitude_voo(10600);
@@ -262,7 +262,7 @@ void cartas_aviao() {
     carta[26].set_super_trunfo(false);
 
     carta[27].set_nome("Boeing 757-300");
-    carta[27].set_tipo("A4");
+    carta[27].set_tipo("D3");
     carta[27].set_peso(122472);
     carta[27].set_velocidade(800);
     carta[27].set_altitude_voo(11200);
@@ -271,7 +271,7 @@ void cartas_aviao() {
     carta[27].set_super_trunfo(false);
 
     carta[28].set_nome("Boeing 757-300");
-    carta[28].set_tipo("A4");
+    carta[28].set_tipo("D4");
     carta[28].set_peso(122472);
     carta[28].set_velocidade(800);
     carta[28].set_altitude_voo(11200);
@@ -280,7 +280,7 @@ void cartas_aviao() {
     carta[28].set_super_trunfo(false);
 
     carta[29].set_nome("Boeing 757-300");
-    carta[29].set_tipo("A4");
+    carta[29].set_tipo("D5");
     carta[29].set_peso(122472);
     carta[29].set_velocidade(800);
     carta[29].set_altitude_voo(11200);
@@ -289,7 +289,7 @@ void cartas_aviao() {
     carta[29].set_super_trunfo(false);
 
     carta[30].set_nome("Boeing 757-300");
-    carta[30].set_tipo("A4");
+    carta[30].set_tipo("D6");
     carta[30].set_peso(122472);
     carta[30].set_velocidade(800);
     carta[30].set_altitude_voo(11200);
@@ -297,8 +297,8 @@ void cartas_aviao() {
     carta[30].set_altura(13.60);
     carta[30].set_super_trunfo(false);
 
-    carta[31].set_nome("Boeing 757-300");
-    carta[31].set_tipo("A4");
+    carta[31].set_nome("chubaca");
+    carta[31].set_tipo("D7");
     carta[31].set_peso(122472);
     carta[31].set_velocidade(800);
     carta[31].set_altitude_voo(11200);
