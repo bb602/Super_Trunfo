@@ -22,6 +22,10 @@ int Heroi::get_habilidade(){
 	return habilidade;
 }
 
+bool Heroi::get_super_trunfo(){
+	return super_trunfo;
+}
+
 void Heroi::imprime_carta(){
 	std::cout << "##########CARTA##########" << std::endl;
 	std::cout << "Nome: " << get_nome() << std::endl;
@@ -29,7 +33,7 @@ void Heroi::imprime_carta(){
 	std::cout << "1 Velocidade: " << get_velocidade() << std::endl;
 	std::cout << "2 Inteligencia: " << get_inteligencia() << std::endl;
 	std::cout << "3 Agilidade: " << get_agilidade() << std::endl;
-	std::cout << "4 Forca: " << get_forca() << std::endl;
+	std::cout << "4 Força: " << get_forca() << std::endl;
 	std::cout << "5 Habilidade: " << get_habilidade() << std::endl;
 	std::cout << "#########################" << std::endl << std::endl;
 }
@@ -52,4 +56,8 @@ void Heroi::set_forca(int forca){
 
 void Heroi::set_habilidade(int habilidade){
 	this-> habilidade = habilidade;
+}
+
+void Heroi::set_super_trunfo(bool super_trunfo){
+	this-> super_trunfo = super_trunfo;
 }
