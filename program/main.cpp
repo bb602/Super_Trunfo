@@ -9,52 +9,13 @@
 #include "Aviao.h"
 #include "Cartas.h"
 #include "CartasAviao.h"
-#include "Menu.h"
 
 const int num_cartas = 4;
-std::stack<Aviao> stack_1;
-std::stack<Aviao> stack_2;
 int player_atual = 1;
 
+std::stack<Aviao> stack_1;
+std::stack<Aviao> stack_2;
 Aviao carta[4];
-void cartas_aviao();
-void embaralhar_cartas();
-void inicializar_pilhas();
-
-int main() {
-
-	cartas_aviao();
-	embaralhar_cartas();
-	inicializar_pilhas();
-
-    int rodada = 1;
-    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-
-    while(!stack_1.empty() && !stack_2.empty()) {
-
-        system("clear");
-        std::cout << std::endl << ">>> Placar <<<" << std::endl;
-        std::cout << "P1 - " << stack_1.size() << " Cartas" << " x " << stack_2.size() << " Cartas - " << "P2"<< std::endl;
-        std::cout << "Rodada: " << rodada++ << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-
-        if (player_atual == 1)
-            jogada_player(&stack_1, &stack_2);
-        else
-            jogada_player(&stack_2, &stack_1);
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(5500));
-    }
-
-    if (stack_1.empty())
-        std::cout << std::endl << "FIM DE JOGO - PLAYER 2 VENCEU!!!" << std::endl << std::endl;
-    else
-        std::cout << std::endl << "FIM DE JOGO - PLAYER 1 VENCEU!!!" << std::endl << std::endl;
-
-    std::cout << "Total de Rodadas: " << rodada;
-
-	return 0;
-}
 
 void cartas_aviao() {
     carta[0].set_nome("Cessna Citation X");
@@ -111,4 +72,69 @@ void inicializar_pilhas() {
 
     std::cout << ">>> Pilhas de Cartas Montadas" << std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
+
+void jogar() {
+    int rodada = 1;
+    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+
+    while(!stack_1.empty() && !stack_2.empty()) {
+
+        system("clear");
+        std::cout << std::endl << ">>> Placar <<<" << std::endl;
+        std::cout << "P1 - " << stack_1.size() << " Cartas" << " x " << stack_2.size() << " Cartas - " << "P2"<< std::endl;
+        std::cout << "Rodada: " << rodada++ << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+
+        if (player_atual == 1)
+            jogada_player(&stack_1, &stack_2);
+        else
+            jogada_player(&stack_2, &stack_1);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(5500));
+    }
+
+    if (stack_1.empty())
+        std::cout << std::endl << "FIM DE JOGO - PLAYER 2 VENCEU!!!" << std::endl << std::endl;
+    else
+        std::cout << std::endl << "FIM DE JOGO - PLAYER 1 VENCEU!!!" << std::endl << std::endl;
+
+    std::cout << "Total de Rodadas: " << rodada;
+}
+
+int main() {
+
+    int x = 0;
+    std::cout << "Escolha o seu baralho: " << std::endl;
+    std::cout << "1 - Baralho Aviao" << std::endl;
+    std::cout << "2 - Baralho Carro" << std::endl;
+    std::cout << "3 - Baralho Dinossauro" << std::endl;
+    std::cout << "4 - Baralho Heroi" << std::endl;
+    std::cin >> x;
+
+    switch(x){
+    case 1:
+        std::cout << "Super Trunfo Aviao!" << std::endl;
+
+        cartas_aviao();
+        embaralhar_cartas();
+        inicializar_pilhas();
+        jogar();
+
+        break;
+    case 2:
+        std::cout << "Super Trunfo Carro!" << std::endl;
+        break;
+    case 3:
+        std::cout << "Super Trunfo Dinossauro!" << std::endl;
+        break;
+    case 4:
+        std::cout << "Super Trunfo Heroi!" << std::endl;
+        break;
+    default:
+        std::cout << "Opcao invalida!" << std::endl;
+        break;
+    }
+    
+	return 0;
 }
