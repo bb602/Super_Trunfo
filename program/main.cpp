@@ -1,253 +1,111 @@
-#include "Carro.h"
-#include "Aviao.h"
-#include "Heroi.h"
-#include "Cartas.h"
-#include "Dinossauro.h"
 #include <iostream>
 #include <string>
-#include <fstream>
+#include <stack>
+#include <ctime>
+#include <algorithm>
+#include <chrono>
+#include <thread>
 
-#define num_linhas 224
-#define num_cartas 32
+#include "Aviao.h"
+#include "Cartas.h"
+#include "CartasAviao.h"
 
-using namespace std;
+const int num_cartas = 4;
+std::stack<Aviao> stack_1;
+std::stack<Aviao> stack_2;
+int player_atual = 1;
 
-void inicializar_cartas(string*, string*, string*);
-void cartas_Aviao(string*);
-void cartas_Carro(string*);
-void cartas_Heroi(string*);
+Aviao carta[4];
+void cartas_aviao();
 
-int main(){
+void embaralhar_cartas() {
+    srand(time(0));
+    std::random_shuffle(&carta[0], &carta[4]);
+    std::cout << ">>> Cartas Embaralhadas" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
 
-	string Baralho_Aviao[num_linhas];
-	string Baralho_Carro[num_linhas];
-	string Baralho_Heroi[num_linhas];
+void inicializar_pilhas() {
+    for (int i = 0; i < num_cartas / 2; i++){
+        stack_1.push(carta[i]);
+    }
+    for (int i = num_cartas / 2; i < num_cartas; i++){
+        stack_2.push(carta[i]);
+    }
 
+    std::cout << ">>> Pilhas de Cartas Montadas" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
 
-	inicializar_cartas(Baralho_Aviao, Baralho_Carro, Baralho_Heroi);
+int main() {
+
+	cartas_aviao();
+	embaralhar_cartas();
+	inicializar_pilhas();
+
+    int rodada = 1;
+    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+
+    while(!stack_1.empty() && !stack_2.empty()) {
+
+        system("clear");
+        std::cout << std::endl << ">>> Placar <<<" << std::endl;
+        std::cout << "P1 - " << stack_1.size() << " Cartas" << " x " << stack_2.size() << " Cartas - " << "P2"<< std::endl;
+        std::cout << "Rodada: " << rodada++ << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+
+        if (player_atual == 1)
+            jogada_player(&stack_1, &stack_2);
+        else
+            jogada_player(&stack_2, &stack_1);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(5500));
+    }
+
+    if (stack_1.empty())
+        std::cout << std::endl << "FIM DE JOGO - PLAYER 2 VENCEU!!!" << std::endl << std::endl;
+    else
+        std::cout << std::endl << "FIM DE JOGO - PLAYER 1 VENCEU!!!" << std::endl << std::endl;
+
+    std::cout << "Total de Rodadas: " << rodada;
 
 	return 0;
 }
 
-void inicializar_cartas(string Baralho_Aviao[], string Baralho_Carro[], string Baralho_Heroi[]){
-	ifstream avioes;
-	avioes.open("CartasAviao.txt");
+void cartas_aviao() {
+    carta[0].set_nome("Cessna Citation X");
+    carta[0].set_tipo("A1");
+    carta[0].set_peso(16193);
+    carta[0].set_velocidade(945);
+    carta[0].set_altitude_voo(13636);
+    carta[0].set_comprimento(22.01);
+    carta[0].set_altura(5.76);
+    carta[0].set_super_trunfo(false);
 
-	for(int i = 0;i < 224;i++)
-		getline(avioes, Baralho_Aviao[i]);
+    carta[1].set_nome("Canadair Global Express");
+    carta[1].set_tipo("A2");
+    carta[1].set_peso(41275);
+    carta[1].set_velocidade(880);
+    carta[1].set_altitude_voo(15500);
+    carta[1].set_comprimento(30.20);
+    carta[1].set_altura(7.50);
+    carta[1].set_super_trunfo(false);
 
-	avioes.close();
+    carta[2].set_nome("Bombardier CRJ 700");
+    carta[2].set_tipo("A3");
+    carta[2].set_peso(32885);
+    carta[2].set_velocidade(785);
+    carta[2].set_altitude_voo(10600);
+    carta[2].set_comprimento(32.41);
+    carta[2].set_altura(7.32);
+    carta[2].set_super_trunfo(false);
 
-	ifstream carros;
-	carros.open("CartasCarro.txt");
-
-	for(int i = 0;i < 224;i++)
-		getline(carros, Baralho_Carro[i]);
-
-	carros.close();
-
-	ifstream herois;
-	herois.open("CartasHerois.txt");
-
-	for(int i = 0;i < 224;i++)
-		getline(herois, Baralho_Heroi[i]);
-
-	herois.close();
-
-	cartas_Aviao(Baralho_Aviao);
-	cartas_Carro(Baralho_Carro);
-	cartas_Heroi(Baralho_Heroi);
-}
-
-void cartas_Aviao(string Baralho_Aviao[]){
-	Aviao carta1;
-	Aviao carta2;
-	Aviao carta3;
-	Aviao carta4;
-	Aviao carta5;
-	Aviao carta6;
-	Aviao carta7;
-	Aviao carta8;
-	Aviao carta9;
-	Aviao carta10;
-	Aviao carta11;
-	Aviao carta12;
-	Aviao carta13;
-	Aviao carta14;
-	Aviao carta15;
-	Aviao carta16;
-	Aviao carta17;
-	Aviao carta18;
-	Aviao carta19;
-	Aviao carta20;
-	Aviao carta21;
-	Aviao carta22;
-	Aviao carta23;
-	Aviao carta24;
-	Aviao carta25;
-	Aviao carta26;
-	Aviao carta27;
-	Aviao carta28;
-	Aviao carta29;
-	Aviao carta30;
-	Aviao carta31;
-	Aviao carta32;
-
-	int i = 0;
-	while(i <= 13){
-		carta1.set_nome(Baralho_Aviao[i]);
-		carta1.set_tipo(Baralho_Aviao[i+1]);
-		carta1.set_peso(Baralho_Aviao[i+2]);
-		carta1.set_velocidade(Baralho_Aviao[i+3]);
-		carta1.set_altitude_voo(Baralho_Aviao[i+4]);
-		carta1.set_comprimento(Baralho_Aviao[i+5]);
-		carta1.set_altura(Baralho_Aviao[i+6]);
-		i++;i++;i++;i++;i++;i++;i++;
-
-		carta2.set_nome(Baralho_Aviao[i]);
-		carta2.set_tipo(Baralho_Aviao[i+1]);
-		carta2.set_peso(Baralho_Aviao[i+2]);
-		carta2.set_velocidade(Baralho_Aviao[i+3]);
-		carta2.set_altitude_voo(Baralho_Aviao[i+4]);
-		carta2.set_comprimento(Baralho_Aviao[i+5]);
-		carta2.set_altura(Baralho_Aviao[i+6]);
-		i++;i++;i++;i++;i++;i++;i++;
-	}
-
-	carta1.imprime_carta();
-	carta2.imprime_carta();
-
-	if(carta1.get_peso() > carta2.get_peso())
-		cout << "Jogador 1 venceu" << endl << endl;
-	else
-		cout << "Jogador 2 venceu" << endl << endl;
-
-}
-
-void cartas_Carro(string Baralho_Carro[]){
-	Carro carta1;
-	Carro carta2;
-	Carro carta3;
-	Carro carta4;
-	Carro carta5;
-	Carro carta6;
-	Carro carta7;
-	Carro carta8;
-	Carro carta9;
-	Carro carta10;
-	Carro carta11;
-	Carro carta12;
-	Carro carta13;
-	Carro carta14;
-	Carro carta15;
-	Carro carta16;
-	Carro carta17;
-	Carro carta18;
-	Carro carta19;
-	Carro carta20;
-	Carro carta21;
-	Carro carta22;
-	Carro carta23;
-	Carro carta24;
-	Carro carta25;
-	Carro carta26;
-	Carro carta27;
-	Carro carta28;
-	Carro carta29;
-	Carro carta30;
-	Carro carta31;
-	Carro carta32;
-
-	int i = 0;
-	while(i <= 13){
-		carta1.set_nome(Baralho_Carro[i]);
-		carta1.set_tipo(Baralho_Carro[i+1]);
-		carta1.set_cilindradas(Baralho_Carro[i+2]);
-		carta1.set_potencia(Baralho_Carro[i+3]);
-		carta1.set_velocidade(Baralho_Carro[i+4]);
-		carta1.set_peso(Baralho_Carro[i+5]);
-		carta1.set_comprimento(Baralho_Carro[i+6]);
-		i++;i++;i++;i++;i++;i++;i++;
-
-		carta2.set_nome(Baralho_Carro[i]);
-		carta2.set_tipo(Baralho_Carro[i+1]);
-		carta2.set_cilindradas(Baralho_Carro[i+2]);
-		carta2.set_potencia(Baralho_Carro[i+3]);
-		carta2.set_velocidade(Baralho_Carro[i+4]);
-		carta2.set_peso(Baralho_Carro[i+5]);
-		carta2.set_comprimento(Baralho_Carro[i+6]);
-		i++;i++;i++;i++;i++;i++;i++;
-	}
-
-	carta1.imprime_carta();
-	carta2.imprime_carta();
-
-	if(carta1.get_velocidade() > carta2.get_velocidade())
-		cout << "Jogador 1 venceu" << endl << endl;
-	else
-		cout << "Jogador 2 venceu" << endl << endl;
-}
-
-void cartas_Heroi(string Baralho_Heroi[]){
-	Heroi carta1;
-	Heroi carta2;
-	Heroi carta3;
-	Heroi carta4;
-	Heroi carta5;
-	Heroi carta6;
-	Heroi carta7;
-	Heroi carta8;
-	Heroi carta9;
-	Heroi carta10;
-	Heroi carta11;
-	Heroi carta12;
-	Heroi carta13;
-	Heroi carta14;
-	Heroi carta15;
-	Heroi carta16;
-	Heroi carta17;
-	Heroi carta18;
-	Heroi carta19;
-	Heroi carta20;
-	Heroi carta21;
-	Heroi carta22;
-	Heroi carta23;
-	Heroi carta24;
-	Heroi carta25;
-	Heroi carta26;
-	Heroi carta27;
-	Heroi carta28;
-	Heroi carta29;
-	Heroi carta30;
-	Heroi carta31;
-	Heroi carta32;
-
-	int i = 0;
-	while(i <= 13){
-		carta1.set_nome(Baralho_Heroi[i]);
-		carta1.set_tipo(Baralho_Heroi[i+1]);
-		carta1.set_velocidade(Baralho_Heroi[i+2]);
-		carta1.set_inteligencia(Baralho_Heroi[i+3]);
-		carta1.set_agilidade(Baralho_Heroi[i+4]);
-		carta1.set_forca(Baralho_Heroi[i+5]);
-		carta1.set_habilidade(Baralho_Heroi[i+6]);
-		i++;i++;i++;i++;i++;i++;i++;
-
-		carta2.set_nome(Baralho_Heroi[i]);
-		carta2.set_tipo(Baralho_Heroi[i+1]);
-		carta2.set_velocidade(Baralho_Heroi[i+2]);
-		carta2.set_inteligencia(Baralho_Heroi[i+3]);
-		carta2.set_agilidade(Baralho_Heroi[i+4]);
-		carta2.set_forca(Baralho_Heroi[i+5]);
-		carta2.set_habilidade(Baralho_Heroi[i+6]);
-		i++;i++;i++;i++;i++;i++;i++;
-	}
-
-	carta1.imprime_carta();
-	carta2.imprime_carta();
-
-	if(carta1.get_forca() > carta2.get_forca())
-		cout << "Jogador 1 venceu" << endl << endl;
-	else
-		cout << "Jogador 2 venceu" << endl << endl;
+    carta[3].set_nome("Boeing 757-300");
+    carta[3].set_tipo("A4");
+    carta[3].set_peso(122472);
+    carta[3].set_velocidade(800);
+    carta[3].set_altitude_voo(11200);
+    carta[3].set_comprimento(54.50);
+    carta[3].set_altura(13.60);
+    carta[3].set_super_trunfo(false);
 }
