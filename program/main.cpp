@@ -9,6 +9,7 @@
 #include "Aviao.h"
 #include "Cartas.h"
 #include "CartasAviao.h"
+#include "Menu.h"
 
 const int num_cartas = 4;
 std::stack<Aviao> stack_1;
@@ -17,25 +18,8 @@ int player_atual = 1;
 
 Aviao carta[4];
 void cartas_aviao();
-
-void embaralhar_cartas() {
-    srand(time(0));
-    std::random_shuffle(&carta[0], &carta[4]);
-    std::cout << ">>> Cartas Embaralhadas" << std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-}
-
-void inicializar_pilhas() {
-    for (int i = 0; i < num_cartas / 2; i++){
-        stack_1.push(carta[i]);
-    }
-    for (int i = num_cartas / 2; i < num_cartas; i++){
-        stack_2.push(carta[i]);
-    }
-
-    std::cout << ">>> Pilhas de Cartas Montadas" << std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-}
+void embaralhar_cartas();
+void inicializar_pilhas();
 
 int main() {
 
@@ -108,4 +92,23 @@ void cartas_aviao() {
     carta[3].set_comprimento(54.50);
     carta[3].set_altura(13.60);
     carta[3].set_super_trunfo(false);
+}
+
+void embaralhar_cartas() {
+    srand(time(0));
+    std::random_shuffle(&carta[0], &carta[4]);
+    std::cout << ">>> Cartas Embaralhadas" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
+
+void inicializar_pilhas() {
+    for (int i = 0; i < num_cartas / 2; i++){
+        stack_1.push(carta[i]);
+    }
+    for (int i = num_cartas / 2; i < num_cartas; i++){
+        stack_2.push(carta[i]);
+    }
+
+    std::cout << ">>> Pilhas de Cartas Montadas" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 }
