@@ -2,23 +2,23 @@
 #include <iostream>
 #include <string>
 
-std::string Heroi::get_velocidade(){
+int Heroi::get_velocidade(){
 	return velocidade;
 }
 
-std::string Heroi::get_inteligencia(){
+int Heroi::get_inteligencia(){
 	return inteligencia;
 }
 
-std::string Heroi::get_agilidade(){
+int Heroi::get_agilidade(){
 	return agilidade;
 }
 
-std::string Heroi::get_forca(){
+int Heroi::get_forca(){
 	return forca;
 }
 
-std::string Heroi::get_habilidade(){
+int Heroi::get_habilidade(){
 	return habilidade;
 }
 
@@ -29,27 +29,27 @@ void Heroi::imprime_carta(){
 	std::cout << "1 Velocidade: " << get_velocidade() << std::endl;
 	std::cout << "2 Inteligencia: " << get_inteligencia() << std::endl;
 	std::cout << "3 Agilidade: " << get_agilidade() << std::endl;
-	std::cout << "4 Força: " << get_forca() << std::endl;
+	std::cout << "4 ForÃ§a: " << get_forca() << std::endl;
 	std::cout << "5 Habilidade: " << get_habilidade() << std::endl;
 	std::cout << "#########################" << std::endl << std::endl;
 }
 
-void Heroi::set_velocidade(std::string velocidade){
+void Heroi::set_velocidade(int velocidade){
 	this-> velocidade = velocidade;
 }
 
-void Heroi::set_inteligencia(std::string inteligencia){
+void Heroi::set_inteligencia(int inteligencia){
 	this-> inteligencia = inteligencia;
 }
 
-void Heroi::set_agilidade(std::string agilidade){
+void Heroi::set_agilidade(int agilidade){
 	this-> agilidade = agilidade;
 }
 
-void Heroi::set_forca(std::string forca){
+void Heroi::set_forca(int forca){
 	this-> forca = forca;
 }
 
-void Heroi::set_habilidade(std::string habilidade){
+void Heroi::set_habilidade(int habilidade){
 	this-> habilidade = habilidade;
 }
