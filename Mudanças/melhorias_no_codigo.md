@@ -1,4 +1,4 @@
-                                               <h1>Mudanças no código</h1>
+<h1>                                                    Mudanças no código</h1>
 <h1>Modo de jogo</h1>
 O modo de jogo foi alterado de player vs bot para player vs player, oque era nossa idéia inicial. Reestruturamos as funções que 
 rodam o jogo a fim de trazer esse modo de jogo mais complexo para nosso game, visto que era nossa proposta inicial. Agora após a 
