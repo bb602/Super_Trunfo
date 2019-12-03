@@ -5,7 +5,7 @@ Implementação, em C++ v11/14, do jogo Super Trunfo via terminal. Sendo possív
 
 <ul>
   <li>Como um jogador eu gostaria de escolher uma modalidade de Super Trunfo para jogar;</li>
-  <li>Como um jogador eu gostaria de digitar <i>!rules</i> e ver todas as regras do jogo;</li>
+  <li>Como um jogador eu gostaria de ver todas as regras do jogo com determinado comando;</li>
   <li>Como um jogador eu quero que o placar e a pilha de cartas estejam explícitos a todo o momento do jogo;</li>
   <li>Como um jogador eu quero a funcionalidade de interromper o jogo a qualquer momento;</li>
   <li>Como um jogador eu quero que uma carta super trunfo esteja no meu baralho;</li>
